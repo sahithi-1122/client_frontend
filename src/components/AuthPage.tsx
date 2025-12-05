@@ -38,7 +38,7 @@ const AuthPage: React.FC<AuthPageProps> = ({ onLogin }) => {
     try {
       if (isLogin) {
         // ---- LOGIN ----
-        const response = await fetch('https://client-backend-1-mqun.onrender.com//api/login', {
+        const response = await fetch('https://client-backend-1-mqun.onrender.com/api/login', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -63,7 +63,7 @@ const AuthPage: React.FC<AuthPageProps> = ({ onLogin }) => {
         onLogin(userData, data.token);
       } else {
         // ---- SIGN UP ----
-        const response = await fetch('https://client-backend-1-mqun.onrender.com//api/signup', {
+        const response = await fetch('https://client-backend-1-mqun.onrender.com/api/signup', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
